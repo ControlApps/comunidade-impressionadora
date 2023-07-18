@@ -22,41 +22,39 @@ O projeto "Comunidade Impressionadora" é um site desenvolvido em Flask que perm
 
 1. Clone o repositório para o seu ambiente local:
 
-git clone https://github.com/Dhygg69/comunidade-impressionadora.git
+  git clone https://github.com/Dhygg69/comunidade-impressionadora.git
 
 
 2. Acesse o diretório do projeto:
 
-cd comunidade-impressionadora
+  cd comunidade-impressionadora
 
 
 3. Crie um ambiente virtual (opcional, mas recomendado):
 
-python -m venv venv
+  python -m venv venv
 
 
 4. Ative o ambiente virtual:
 
 - Windows:
-venv\Scripts\activate
+  venv\Scripts\activate
 
 
 - Linux/Mac:
-source venv/bin/activate
+  source venv/bin/activate
 
 
 5. Instale as dependências do projeto:
 
-pip install -r requirements.txt
+  pip install -r requirements.txt
 
 
 6. Execute o aplicativo:
 
-python main.py
+  python main.py
 
 7. Acesse o aplicativo em seu navegador em [http://localhost:5000](http://localhost:5000).
-
-## Contribuição
 
 Contribuições são bem-vindas! Se você quiser contribuir com este projeto, sinta-se à vontade para enviar pull requests ou relatar problemas no [repositório do projeto](https://github.com/Dhygg69/comunidade-impressionadora).
 
