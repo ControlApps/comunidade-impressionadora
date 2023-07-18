@@ -22,7 +22,7 @@ O projeto "Comunidade Impressionadora" é um site desenvolvido em Flask que perm
 
 1. Clone o repositório para o seu ambiente local:
 
-  git clone https://github.com/Dhygg69/comunidade-impressionadora.git
+  git clone https://github.com/ControlApss/comunidade-impressionadora.git
 
 
 2. Acesse o diretório do projeto:
@@ -56,7 +56,7 @@ O projeto "Comunidade Impressionadora" é um site desenvolvido em Flask que perm
 
 7. Acesse o aplicativo em seu navegador em [http://localhost:5000](http://localhost:5000).
 
-Contribuições são bem-vindas! Se você quiser contribuir com este projeto, sinta-se à vontade para enviar pull requests ou relatar problemas no [repositório do projeto](https://github.com/Dhygg69/comunidade-impressionadora).
+Contribuições são bem-vindas! Se você quiser contribuir com este projeto, sinta-se à vontade para enviar pull requests ou relatar problemas no [repositório do projeto](https://github.com/ControlApps/comunidade-impressionadora).
 
 ## Licença
 
