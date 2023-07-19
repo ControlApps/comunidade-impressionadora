@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="container">
-        <h1>Faça Login ou Crie sua Conta para continuar</h1>
+        <h1>Faça Login</h1>
         <hr>
         <div class="row">
             <div class="col">
@@ -14,11 +14,11 @@
                             {{ form_login.email.label(class="form-control-label") }}
                             {% if form_login.email.errors %}
                                 {{ form_login.email(class="form-control is-invalid") }}
-                            <div class="invalid-feedback">
-                                {% for erro in form_login.email.errors %}
-                                    {{ erro }}
-                                {% endfor %}
-                            </div>
+                                <div class="invalid-feedback">
+                                    {% for erro in form_login.email.errors %}
+                                        {{ erro }}
+                                    {% endfor %}
+                                </div>
                             {% else %}
                                 {{ form_login.email(class="form-control") }}
                             {% endif %}
@@ -27,11 +27,11 @@
                             {{ form_login.senha.label(class="form-control-label") }}
                             {% if form_login.senha.errors %}
                                 {{ form_login.senha(class="form-control is-invalid") }}
-                            <div class="invalid-feedback">
-                                {% for erro in form_login.senha.errors %}
-                                    {{ erro }}
-                                {% endfor %}
-                            </div>
+                                <div class="invalid-feedback">
+                                    {% for erro in form_login.senha.errors %}
+                                        {{ erro }}
+                                    {% endfor %}
+                                </div>
                             {% else %}
                                 {{ form_login.senha(class="form-control") }}
                             {% endif %}
@@ -41,119 +41,14 @@
                             {{ form_login.lembrar_dados(class="form-check-input") }}
                         </div>
                     </fieldset>
-                    {{ form_login.botao_submit_login(class="btn btn-primary mt-2") }}
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+                        <form method="GET" action="{{ url_for('resetsenha') }}">
+                            <button type="submit" class="btn btn-link">Resetar Senha</button>
+                        </form>
+                    </div>
                 </form>
             </div>
-            <div class="col">
-                <form method="POST" action="" class="border p-4 mt-2">
-                    {{ form_criarconta.csrf_token }}
-                    <legend>Criar Conta</legend>
-                    <fieldset>
-                        <div class="form-group">
-                            {{ form_criarconta.username.label(class="form-control-label") }}
-                            {% if form_criarconta.username.errors %}
-                                {{ form_criarconta.username(class="form-control is-invalid") }}
-                            <div class="invalid-feedback">
-                                {% for erro in form_criarconta.username.errors %}
-                                    {{ erro }}
-                                {% endfor %}
-                            </div>
-                            {% else %}
-                                {{ form_criarconta.username(class="form-control") }}
-                            {% endif %}
-                        </div>
-                        <div class="form-group">
-                            {{ form_criarconta.email.label(class="form-control-label") }}
-                            {% if form_criarconta.email.errors %}
-                                {{ form_criarconta.email(class="form-control is-invalid") }}
-                            <div class="invalid-feedback">
-                                {% for erro in form_criarconta.email.errors %}
-                                    {{ erro }}
-                                {% endfor %}
-                            </div>
-                            {% else %}
-                                {{ form_criarconta.email(class="form-control") }}
-                            {% endif %}
-                        </div>
-                        <div class="form-group">
-                            {{ form_criarconta.senha.label(class="form-control-label") }}
-                            {% if form_criarconta.senha.errors %}
-                                {{ form_criarconta.senha(class="form-control is-invalid") }}
-                            <div class="invalid-feedback">
-                                {% for erro in form_criarconta.senha.errors %}
-                                    {{ erro }}
-                                {% endfor %}
-                            </div>
-                            {% else %}
-                                {{ form_criarconta.senha(class="form-control") }}
-                            {% endif %}
-                        </div>
-                        <div class="form-group">
-                            {{ form_criarconta.confirmacao_senha.label(class="form-control-label") }}
-                            {% if form_criarconta.confirmacao_senha.errors %}
-                                {{ form_criarconta.confirmacao_senha(class="form-control is-invalid") }}
-                            <div class="invalid-feedback">
-                                {% for erro in form_criarconta.confirmacao_senha.errors %}
-                                    {{ erro }}
-                                {% endfor %}
-                            </div>
-                            {% else %}
-                                {{ form_criarconta.confirmacao_senha(class="form-control") }}
-                            {% endif %}
-                        </div>
-                    </fieldset>
-                    {{ form_criarconta.botao_submit_criarconta(class="btn btn-primary mt-2") }}
-                </form>
-            </div>
-        </div>
-
-        <div class="col">
-            <form method="POST" action="" class="border p-4 mt-2">
-                {{ form_resetsenha.csrf_token }}
-                <legend>Redefinir Senha</legend>
-                <fieldset>
-                    <div class="form-group">
-                        {{ form_resetsenha.email.label(class="form-control-label") }}
-                        {% if form_resetsenha.email.errors %}
-                            {{ form_resetsenha.email(class="form-control is-invalid") }}
-                            <div class="invalid-feedback">
-                                {% for erro in form_resetsenha.email.errors %}
-                                    {{ erro }}
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            {{ form_resetsenha.email(class="form-control") }}
-                        {% endif %}
-                    </div>
-                    <div class="form-group">
-                        {{ form_resetsenha.nova_senha.label(class="form-control-label") }}
-                        {% if form_resetsenha.nova_senha.errors %}
-                            {{ form_resetsenha.nova_senha(class="form-control is-invalid") }}
-                            <div class="invalid-feedback">
-                                {% for erro in form_resetsenha.nova_senha.errors %}
-                                    {{ erro }}
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            {{ form_resetsenha.nova_senha(class="form-control") }}
-                        {% endif %}
-                    </div>
-                    <div class="form-group">
-                        {{ form_resetsenha.confirmar_senha.label(class="form-control-label") }}
-                        {% if form_resetsenha.confirmar_senha.errors %}
-                            {{ form_resetsenha.confirmar_senha(class="form-control is-invalid") }}
-                            <div class="invalid-feedback">
-                                {% for erro in form_resetsenha.confirmar_senha.errors %}
-                                    {{ erro }}
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            {{ form_resetsenha.confirmar_senha(class="form-control") }}
-                        {% endif %}
-                    </div>
-                </fieldset>
-                {{ form_resetsenha.botao_submit_resetsenha(class="btn btn-primary mt-2") }}
-            </form>
         </div>
     </div>
 {% endblock %}
