@@ -43,9 +43,9 @@
                     </fieldset>
                     <div class="d-flex justify-content-between align-items-center">
                         <button type="submit" class="btn btn-primary mt-2">Enviar</button>
-                        <form method="GET" action="{{ url_for('resetsenha') }}">
-                            <button type="submit" class="btn btn-link">Resetar Senha</button>
-                        </form>
+                        <p class="text-center mt-2">
+                            Esqueceu sua senha? <a href="{{ url_for('resetsenha') }}">Clique aqui!</a>
+                        </p>
                     </div>
                 </form>
             </div>
